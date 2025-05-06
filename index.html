@@ -1,0 +1,37 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF to Image Converter</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script>
+      pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js";
+    </script>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>PDF to Image Converter</h1>
+
+      <div class="upload-section" id="drop-area">
+        <p>Pilih file PDF atau seret file ke sini</p>
+        <input type="file" id="file-input" accept="application/pdf" />
+        <button class="upload-btn" id="select-file-btn">Pilih File</button>
+      </div>
+
+      <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+        <p>Sedang memproses...</p>
+      </div>
+
+      <div id="error-container"></div>
+
+      <div id="preview-container"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
